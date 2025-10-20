@@ -1,0 +1,32 @@
+import unittest
+from sample_code import greet
+
+
+class TestGreetFunction(unittest.TestCase):
+    """Test cases for the greet function"""
+    
+    def test_default_greeting(self):
+        """Test Case 1: Test greeting with default parameter (no name provided)"""
+        result = greet()
+        expected = "Hello, World! Welcome to Python programming! 🐍"
+        self.assertEqual(result, expected)
+        print("✓ Test 1 passed: Default greeting works correctly")
+    
+    def test_custom_name(self):
+        """Test Case 2: Test greeting with a custom name"""
+        result = greet("Alice")
+        expected = "Hello, Alice! Welcome to Python programming! 🐍"
+        self.assertEqual(result, expected)
+        print("✓ Test 2 passed: Custom name greeting works correctly")
+    
+    def test_empty_string(self):
+        """Test Case 3: Test greeting with an empty string"""
+        result = greet("")
+        expected = "Hello, ! Welcome to Python programming! 🐍"
+        self.assertEqual(result, expected)
+        print("✓ Test 3 passed: Empty string greeting works correctly")
+
+
+if __name__ == "__main__":
+    # Run the tests with verbose output
+    unittest.main(verbosity=2)
