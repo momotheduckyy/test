@@ -1,26 +1,3 @@
-def greet(name="World"):
-    """
-    A simple function that returns a greeting message.
-    
-    Args:
-        name (str): The name to greet. Defaults to "World".
-    
-    Returns:
-        str: A greeting message
-    """
-    return f"Hello, {name}! Welcome to Python programming! 🐍"
-
-
-def main():
-    # Test the function with different inputs
-    print(greet())
-    print(greet("Alice"))
-    print(greet("Bob"))
-    
-    # Return a value from main
-    return "Program executed successfully!"
-
-
-if __name__ == "__main__":
-    result = main()
-    print(f"\n{result}")
+def add_numbers(a, b):
+    """Add two numbers and return the result"""
+    return a + b
